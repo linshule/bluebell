@@ -1,0 +1,11 @@
+# 忽略编译产生的文件
+main
+main.exe
+*.exe
+
+# 忽略 IDE 产生的配置文件 (如果你用 Goland 或 VSCode)
+.idea/
+.vscode/
+
+# 忽略 Mac 系统文件 (如果你是用 Mac)
+.DS_Store
