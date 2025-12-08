@@ -2,3 +2,10 @@ app:
   name: "bluebell"
   port: 8080
   version: "1.0.0"
+
+log:
+  level: "debug"          
+  filename: "bluebell.log" 
+  max_size: 200           #MB
+  max_age: 30             #天
+  max_backups: 7          #文件数

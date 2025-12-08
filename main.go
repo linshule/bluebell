@@ -2,24 +2,32 @@ package main
 
 import (
 	"bluebell/config"
-	"fmt"
+	"bluebell/logger"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
+	"go.uber.org/zap"
 )
 
 func main() {
 
 	if err := config.Init(); err != nil {
-		fmt.Printf("配置加载失败：%v\n", err)
-		return
+		panic(err)
 	}
-	fmt.Printf("配置加载成功！\n")
+	if err := logger.Init(); err != nil {
+		panic(err)
+	}
+
+	defer zap.L().Sync()
+
+	zap.L().Info("配置和日志已加载成功！")
 
 	r := gin.Default()
 	r.GET("/hello", func(c *gin.Context) {
 		appName := viper.GetString("app.name")
+
+		zap.L().Debug("接收到hello请求")
 
 		c.JSON(http.StatusOK, gin.H{
 			"message": "Hello," + appName,
@@ -28,5 +36,8 @@ func main() {
 	})
 
 	port := viper.GetString("app.port")
+
+	zap.L().Info("服务器启动...", zap.String("port", port))
+
 	r.Run(":" + port)
 }
