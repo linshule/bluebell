@@ -2,7 +2,9 @@ package main
 
 import (
 	"bluebell/config"
+	"bluebell/dao/mysql"
 	"bluebell/logger"
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
@@ -22,7 +24,11 @@ func main() {
 	defer zap.L().Sync()
 
 	zap.L().Info("配置和日志已加载成功！")
-
+	if err := mysql.Init(); err != nil {
+		fmt.Printf("init mysql failed, err:%v\n", err)
+		return
+	}
+	zap.L().Info("MySQL连接成功！")
 	r := gin.Default()
 	r.GET("/hello", func(c *gin.Context) {
 		appName := viper.GetString("app.name")

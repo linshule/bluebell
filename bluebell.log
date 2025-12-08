@@ -1,3 +1,9 @@
 2025-12-08T20:54:47.807+0800	[34mINFO[0m	goshizhan/main.go:24	配置和日志已加载成功！
 2025-12-08T20:54:47.814+0800	[34mINFO[0m	goshizhan/main.go:40	服务器启动...	{"port": "8080"}
 2025-12-08T20:55:44.034+0800	[35mDEBUG[0m	goshizhan/main.go:30	接收到hello请求
+2025-12-08T21:35:01.039+0800	[34mINFO[0m	goshizhan/main.go:26	配置和日志已加载成功！
+2025-12-08T21:35:01.052+0800	[34mINFO[0m	goshizhan/main.go:31	MySQL连接成功！
+2025-12-08T21:35:01.052+0800	[34mINFO[0m	goshizhan/main.go:46	服务器启动...	{"port": "8080"}
+2025-12-08T21:41:19.731+0800	[34mINFO[0m	goshizhan/main.go:26	配置和日志已加载成功！
+2025-12-08T21:41:19.792+0800	[34mINFO[0m	goshizhan/main.go:31	MySQL连接成功！
+2025-12-08T21:41:19.792+0800	[34mINFO[0m	goshizhan/main.go:46	服务器启动...	{"port": "8080"}
