@@ -35,3 +35,9 @@ func Login(user *models.User) (err error) {
 	err = encrypt.ComparePasswords(user.Password, originPassword)
 	return
 }
+
+func GetUserByID(uid int64) (user *models.User, err error) {
+	user = new(models.User)
+	err = DB.First(user, uid).Error
+	return
+}

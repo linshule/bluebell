@@ -4,6 +4,7 @@ import (
 	"bluebell/config"
 	"bluebell/dao/mysql"
 	"bluebell/logger"
+	"bluebell/pkg/snowflake"
 	"bluebell/routes"
 	"fmt"
 
@@ -28,6 +29,11 @@ func main() {
 		return
 	}
 	zap.L().Info("MySQL连接成功！")
+
+	if err := snowflake.Init(viper.GetString("app.start_time"), viper.GetInt64("app.machine_id")); err != nil {
+		fmt.Printf("init snowflake failed, err:%v\n", err)
+		return
+	}
 
 	r := routes.Setup()
 

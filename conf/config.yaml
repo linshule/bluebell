@@ -2,6 +2,8 @@ app:
   name: "bluebell"
   port: 8080
   version: "1.0.0"
+  machine_id: 1           # 机器ID
+  start_time: "2006-01-02" 
 
 log:
   level: "debug"          
@@ -9,6 +11,7 @@ log:
   max_size: 200           #MB
   max_age: 30             #天
   max_backups: 7          #文件数
+
 
 mysql:
   host: "127.0.0.1"

@@ -33,3 +33,18 @@
 2025-12-09T20:44:16.794+0800	[34mINFO[0m	goshizhan/main.go:30	MySQL连接成功！
 2025-12-09T20:44:16.794+0800	[34mINFO[0m	goshizhan/main.go:36	服务器启动...	{"port": "8080"}
 2025-12-09T20:49:23.465+0800	[31mERROR[0m	controllers/community.go:33	logic.GetCommunityDetail() failed	{"error": "社区不存在"}
+2025-12-09T21:26:58.038+0800	[34mINFO[0m	goshizhan/main.go:26	配置和日志已加载成功！
+2025-12-09T21:26:58.082+0800	[34mINFO[0m	goshizhan/main.go:31	MySQL连接成功！
+2025-12-09T21:26:58.087+0800	[34mINFO[0m	goshizhan/main.go:37	服务器启动...	{"port": "8080"}
+2025-12-09T21:29:59.554+0800	[34mINFO[0m	goshizhan/main.go:26	配置和日志已加载成功！
+2025-12-09T21:29:59.570+0800	[34mINFO[0m	goshizhan/main.go:31	MySQL连接成功！
+2025-12-09T21:30:23.343+0800	[34mINFO[0m	goshizhan/main.go:26	配置和日志已加载成功！
+2025-12-09T21:30:23.361+0800	[34mINFO[0m	goshizhan/main.go:31	MySQL连接成功！
+2025-12-09T21:31:41.664+0800	[34mINFO[0m	goshizhan/main.go:26	配置和日志已加载成功！
+2025-12-09T21:31:41.684+0800	[34mINFO[0m	goshizhan/main.go:31	MySQL连接成功！
+2025-12-09T21:31:41.685+0800	[34mINFO[0m	goshizhan/main.go:42	服务器启动...	{"port": "8080"}
+2025-12-09T21:31:45.354+0800	[31mERROR[0m	logic/post.go:17	mysql.CreatePost failed	{"error": "Error 1146 (42S02): Table 'bluebell.post' doesn't exist"}
+2025-12-09T21:31:45.354+0800	[31mERROR[0m	controllers/post.go:27	logic.CreatePost failed	{"error": "Error 1146 (42S02): Table 'bluebell.post' doesn't exist"}
+2025-12-09T21:33:11.912+0800	[34mINFO[0m	goshizhan/main.go:26	配置和日志已加载成功！
+2025-12-09T21:33:11.949+0800	[34mINFO[0m	goshizhan/main.go:31	MySQL连接成功！
+2025-12-09T21:33:11.949+0800	[34mINFO[0m	goshizhan/main.go:42	服务器启动...	{"port": "8080"}
