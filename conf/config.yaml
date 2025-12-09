@@ -18,3 +18,6 @@ mysql:
   dbname: "bluebell"
   max_open_conns: 20   # 最大打开连接数
   max_idle_conns: 10   # 最大空闲连接数
+
+auth:
+  jwt_expire: 24

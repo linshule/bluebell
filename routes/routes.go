@@ -15,6 +15,7 @@ func Setup() *gin.Engine {
 	r.Use(gin.Recovery())
 
 	r.POST("/signup", controllers.SignUpHandler)
+	r.POST("/login", controllers.LoginHandler)
 
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "ok")

@@ -35,3 +35,25 @@ func SignUpHandler(c *gin.Context) {
 		"msg": "success",
 	})
 }
+
+func LoginHandler(c *gin.Context) {
+	p := new(models.ParamLogin)
+	if err := c.ShouldBindJSON(p); err != nil {
+		c.JSON(http.StatusOK, gin.H{"msg": "参数无效"})
+		return
+	}
+
+	token, err := logic.Login(p)
+	if err != nil {
+		c.JSON(http.StatusOK, gin.H{
+			"msg":   "登录失败",
+			"error": err.Error(),
+		})
+		return
+	}
+
+	c.JSON(http.StatusOK, gin.H{
+		"msg":   "success",
+		"token": token,
+	})
+}
