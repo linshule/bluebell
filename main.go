@@ -4,10 +4,9 @@ import (
 	"bluebell/config"
 	"bluebell/dao/mysql"
 	"bluebell/logger"
+	"bluebell/routes"
 	"fmt"
-	"net/http"
 
-	"github.com/gin-gonic/gin"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
 )
@@ -29,17 +28,8 @@ func main() {
 		return
 	}
 	zap.L().Info("MySQL连接成功！")
-	r := gin.Default()
-	r.GET("/hello", func(c *gin.Context) {
-		appName := viper.GetString("app.name")
 
-		zap.L().Debug("接收到hello请求")
-
-		c.JSON(http.StatusOK, gin.H{
-			"message": "Hello," + appName,
-			"version": viper.GetString("app.version"),
-		})
-	})
+	r := routes.Setup()
 
 	port := viper.GetString("app.port")
 

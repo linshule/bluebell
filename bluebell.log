@@ -7,3 +7,8 @@
 2025-12-08T21:41:19.731+0800	[34mINFO[0m	goshizhan/main.go:26	配置和日志已加载成功！
 2025-12-08T21:41:19.792+0800	[34mINFO[0m	goshizhan/main.go:31	MySQL连接成功！
 2025-12-08T21:41:19.792+0800	[34mINFO[0m	goshizhan/main.go:46	服务器启动...	{"port": "8080"}
+2025-12-09T16:47:44.091+0800	[34mINFO[0m	goshizhan/main.go:25	配置和日志已加载成功！
+2025-12-09T16:47:44.136+0800	[34mINFO[0m	goshizhan/main.go:30	MySQL连接成功！
+2025-12-09T16:47:44.136+0800	[34mINFO[0m	goshizhan/main.go:36	服务器启动...	{"port": "8080"}
+2025-12-09T16:49:55.995+0800	[31mERROR[0m	controllers/user.go:17	SignUp with invalid param	{"error": "Key: 'ParamSignUp.RePassword' Error:Field validation for 'RePassword' failed on the 'eqfield' tag"}
+2025-12-09T16:50:01.747+0800	[31mERROR[0m	controllers/user.go:26	logic.SignUp failed	{"error": "用户已存在"}
