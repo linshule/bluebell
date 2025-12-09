@@ -4,6 +4,7 @@ import (
 	"net/http"
 
 	"bluebell/controllers"
+	"bluebell/middlewares"
 
 	"github.com/gin-gonic/gin"
 )
@@ -17,6 +18,18 @@ func Setup() *gin.Engine {
 	r.POST("/signup", controllers.SignUpHandler)
 	r.POST("/login", controllers.LoginHandler)
 
+	api := r.Group("/api")
+	api.Use(middlewares.JWTAuthMiddleware())
+	{
+		api.GET("/ping", func(c *gin.Context) {
+			userID, _ := c.Get("userID")
+
+			c.JSON(http.StatusOK, gin.H{
+				"msg":     "pong",
+				"user_id": userID, // 看看能不能拿到
+			})
+		})
+	}
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "ok")
 	})
