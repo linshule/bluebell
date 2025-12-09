@@ -23,3 +23,13 @@
 2025-12-09T20:09:21.127+0800	[34mINFO[0m	goshizhan/main.go:25	配置和日志已加载成功！
 2025-12-09T20:09:21.151+0800	[34mINFO[0m	goshizhan/main.go:30	MySQL连接成功！
 2025-12-09T20:09:21.151+0800	[34mINFO[0m	goshizhan/main.go:36	服务器启动...	{"port": "8080"}
+2025-12-09T20:18:08.837+0800	[34mINFO[0m	goshizhan/main.go:25	配置和日志已加载成功！
+2025-12-09T20:18:08.851+0800	[34mINFO[0m	goshizhan/main.go:30	MySQL连接成功！
+2025-12-09T20:18:08.851+0800	[34mINFO[0m	goshizhan/main.go:36	服务器启动...	{"port": "8080"}
+2025-12-09T20:32:04.881+0800	[34mINFO[0m	goshizhan/main.go:25	配置和日志已加载成功！
+2025-12-09T20:32:04.919+0800	[34mINFO[0m	goshizhan/main.go:30	MySQL连接成功！
+2025-12-09T20:32:04.919+0800	[34mINFO[0m	goshizhan/main.go:36	服务器启动...	{"port": "8080"}
+2025-12-09T20:44:16.778+0800	[34mINFO[0m	goshizhan/main.go:25	配置和日志已加载成功！
+2025-12-09T20:44:16.794+0800	[34mINFO[0m	goshizhan/main.go:30	MySQL连接成功！
+2025-12-09T20:44:16.794+0800	[34mINFO[0m	goshizhan/main.go:36	服务器启动...	{"port": "8080"}
+2025-12-09T20:49:23.465+0800	[31mERROR[0m	controllers/community.go:33	logic.GetCommunityDetail() failed	{"error": "社区不存在"}

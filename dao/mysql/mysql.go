@@ -35,6 +35,6 @@ func Init() (err error) {
 	sqlDB.SetMaxIdleConns(viper.GetInt("mysql.max_idle_conns"))
 	sqlDB.SetMaxOpenConns(viper.GetInt("mysql.max_open_conns"))
 
-	DB.AutoMigrate(&models.User{})
+	DB.AutoMigrate(&models.User{}, &models.Community{})
 	return
 }

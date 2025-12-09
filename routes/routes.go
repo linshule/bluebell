@@ -29,6 +29,8 @@ func Setup() *gin.Engine {
 				"user_id": userID, // 看看能不能拿到
 			})
 		})
+		api.GET("/community", controllers.CommunityHandler)
+		api.GET("/community/:id", controllers.CommunityDetailHandler)
 	}
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "ok")
