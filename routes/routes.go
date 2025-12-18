@@ -33,6 +33,7 @@ func Setup() *gin.Engine {
 		api.GET("/community/:id", controllers.CommunityDetailHandler)
 		api.POST("/post", controllers.CreatePostHandler)
 		api.GET("/post/:id", controllers.GetPostDetailHandler)
+		api.GET("/posts", controllers.GetPostListHandler)
 	}
 	r.GET("/", func(c *gin.Context) {
 		c.String(http.StatusOK, "ok")

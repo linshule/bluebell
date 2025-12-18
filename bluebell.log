@@ -48,3 +48,6 @@
 2025-12-09T21:33:11.912+0800	[34mINFO[0m	goshizhan/main.go:26	配置和日志已加载成功！
 2025-12-09T21:33:11.949+0800	[34mINFO[0m	goshizhan/main.go:31	MySQL连接成功！
 2025-12-09T21:33:11.949+0800	[34mINFO[0m	goshizhan/main.go:42	服务器启动...	{"port": "8080"}
+2025-12-18T20:25:33.420+0800	[34mINFO[0m	goshizhan/main.go:26	配置和日志已加载成功！
+2025-12-18T20:25:33.686+0800	[34mINFO[0m	goshizhan/main.go:31	MySQL连接成功！
+2025-12-18T20:25:33.688+0800	[34mINFO[0m	goshizhan/main.go:42	服务器启动...	{"port": "8080"}

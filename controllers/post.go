@@ -48,3 +48,23 @@ func GetPostDetailHandler(c *gin.Context) {
 	}
 	c.JSON(http.StatusOK, data)
 }
+
+// GetPostListHandler 获取帖子列表接口
+func GetPostListHandler(c *gin.Context) {
+	p := &models.ParamPostList{
+		Page: 1,
+		Size: 10,
+	}
+	if err := c.ShouldBindQuery(p); err != nil {
+		zap.L().Error("GetPostListHandler with invalid params", zap.Error(err))
+		ResponseError(c, http.StatusBadRequest, "参数错误")
+		return
+	}
+	data, err := logic.GetPostList(p)
+	if err != nil {
+		zap.L().Error("logic.GetPostList failed", zap.Error(err))
+		ResponseError(c, http.StatusInternalServerError, "获取列表失败")
+		return
+	}
+	c.JSON(http.StatusOK, data)
+}
