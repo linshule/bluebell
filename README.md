@@ -1,4 +1,4 @@
-# Bluebell - 高性能社区论坛后端 API 🐹
+# Bluebell - 社区论坛后端 API 🐹
 
 ![Gin](https://img.shields.io/badge/Gin-Web_Framework-ff69b4?style=flat&logo=go)
 ![GORM](https://img.shields.io/badge/GORM-MySQL_ORM-blue?style=flat)
