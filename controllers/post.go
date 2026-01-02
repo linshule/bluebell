@@ -60,6 +60,7 @@ func GetPostListHandler(c *gin.Context) {
 		ResponseError(c, http.StatusBadRequest, "参数错误")
 		return
 	}
+	zap.L().Info("获取帖子列表请求参数", zap.Int64("page", p.Page), zap.Int64("size", p.Size))
 	data, err := logic.GetPostList(p)
 	if err != nil {
 		zap.L().Error("logic.GetPostList failed", zap.Error(err))
